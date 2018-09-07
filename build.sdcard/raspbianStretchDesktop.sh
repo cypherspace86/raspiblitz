@@ -351,13 +351,3 @@ read key
 
 # give Raspi a default hostname (optional)
 sudo raspi-config nonint do_hostname "RaspiBlitz"
-
-# *** RASPIBLITZ / LCD (at last - because makes a reboot) ***
-# based on https://www.elegoo.com/tutorial/Elegoo%203.5%20inch%20Touch%20Screen%20User%20Manual%20V1.00.2017.10.09.zip
-cd /home/admin/
-sudo apt-mark hold raspberrypi-bootloader
-git clone https://github.com/goodtft/LCD-show.git
-sudo chmod -R 755 LCD-show
-sudo chown -R admin:admin LCD-show
-cd LCD-show/
-sudo ./LCD35-show
